@@ -1,1 +1,179 @@
-Mark Coloured
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mark Cantan | Comedy • Writing • Music</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --bg: #f4f4f9;
+      --dark: #2c2c2c;
+      --accent: #ff6b6b;
+      --light: #fff;
+      --transition: 0.3s ease;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 100%;
+      background: var(--dark);
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar h2 {
+      color: var(--light);
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+    .sidebar nav ul {
+      list-style: none;
+      width: 100%;
+    }
+    .sidebar nav ul li {
+      margin: 1rem 0;
+    }
+    .sidebar nav ul li a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem;
+      display: block;
+      border-radius: 4px;
+      transition: background var(--transition);
+    }
+    .sidebar nav ul li a:hover {
+      background: var(--accent);
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 240px;
+      padding: 2rem;
+      flex: 1;
+    }
+    section {
+      padding: 4rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+    section:last-child {
+      border: none;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .sidebar {
+        width: 60px;
+        padding: 2rem 0.5rem;
+      }
+      .sidebar h2 {
+        display: none;
+      }
+      .sidebar nav ul li a {
+        font-size: 0.85rem;
+        text-align: center;
+      }
+      .main {
+        margin-left: 60px;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2>Mark Cantan</h2>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#comedy">Comedy</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <section id="home">
+      <h1>Welcome!</h1>
+      <p>I'm Mark Cantan: a stand-up comedian, storyteller, and musician. Dive in for laughs, words, and melodies.</p>
+    </section>
+
+    <section id="about">
+      <h3>About Me</h3>
+      <p>Raised on punchlines and poetry, I blend humor with heart. On stage or on paper, I connect us through shared experience.</p>
+    </section>
+
+    <section id="comedy">
+      <h3>Comedy</h3>
+      <p>From open mics to festivals, I've toured the circuit delivering relatable sets. Check my upcoming shows and clips below.</p>
+    </section>
+
+    <section id="writing">
+      <h3>Writing</h3>
+      <p>Articles, essays, short stories—exploring life’s absurdities one sentence at a time. Browse published works and samples.</p>
+    </section>
+
+    <section id="music">
+      <h3>Music</h3>
+      <p>Guitar in hand, I craft folk-rock tunes with wit. Listen to my tracks, watch live sessions, and grab merch.</p>
+    </section>
+
+    <section id="gallery">
+      <h3>Gallery</h3>
+      <p>Snapshots from the road: backstage moments, live shots, and studio vibes. A visual journey through my creative life.</p>
+    </section>
+
+    <section id="contact">
+      <h3>Get in Touch</h3>
+      <p>For bookings, collabs, or a friendly chat, email me at <a href="mailto:mark@cantan.com">mark@cantan.com</a>.</p>
+    </section>
+  </main>
+
+</body>
+</html>
