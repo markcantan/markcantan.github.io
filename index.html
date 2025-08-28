@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mark Cantan | Comedy • Writing • Music</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark Cantan | Portfolio</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet"
-  >
+  />
   <style>
     :root {
       --bg: #f4f4f9;
@@ -46,6 +46,8 @@
       color: var(--light);
       margin-bottom: 2rem;
       font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     .sidebar nav ul {
       list-style: none;
@@ -62,6 +64,8 @@
       display: block;
       border-radius: 4px;
       transition: background var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     .sidebar nav ul li a:hover {
       background: var(--accent);
@@ -86,7 +90,7 @@
     }
     h3 {
       font-size: 1.75rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: var(--accent);
     }
     p {
@@ -101,8 +105,44 @@
       text-decoration: underline;
     }
 
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Video Grid */
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .videos iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Spotify Embed */
+    .spotify-player {
+      display: flex;
+      justify-content: center;
+    }
+    .spotify-player iframe {
+      border-radius: 12px;
+    }
+
     /* Responsive */
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       .sidebar {
         width: 60px;
         padding: 2rem 0.5rem;
@@ -111,67 +151,90 @@
         display: none;
       }
       .sidebar nav ul li a {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         text-align: center;
+        padding: 0.4rem;
       }
       .main {
         margin-left: 60px;
         padding: 1.5rem;
+      }
+      .videos iframe {
+        height: 180px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Sidebar Navigation -->
   <aside class="sidebar">
     <h2>Mark Cantan</h2>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#comedy">Comedy</a></li>
-        <li><a href="#writing">Writing</a></li>
+        <li><a href="#gallery">Images</a></li>
+        <li><a href="#videos">Videos</a></li>
         <li><a href="#music">Music</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </aside>
 
+  <!-- Main Content -->
   <main class="main">
     <section id="home">
-      <h1>Welcome!</h1>
-      <p>I'm Mark Cantan: a stand-up comedian, storyteller, and musician. Dive in for laughs, words, and melodies.</p>
+      <h1>Welcome to My Portfolio</h1>
+      <p>I'm Mark Cantan—comedian, writer, musician. Explore my work below.</p>
+    </section>
+
+    <section id="gallery">
+      <h3>Photo Gallery</h3>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/1/600/400" alt="Placeholder 1" />
+        <img src="https://picsum.photos/seed/2/600/400" alt="Placeholder 2" />
+        <img src="https://picsum.photos/seed/3/600/400" alt="Placeholder 3" />
+        <img src="https://picsum.photos/seed/4/600/400" alt="Placeholder 4" />
+      </div>
+    </section>
+
+    <section id="videos">
+      <h3>Featured Videos</h3>
+      <div class="videos">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/M7lc1UVf-VE" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="music">
+      <h3>Listen on Spotify</h3>
+      <div class="spotify-player">
+        <iframe
+          src="https://open.spotify.com/embed/track/7GhIk7Il098yCjg4BQjzvb"
+          width="300"
+          height="380"
+          allow="encrypted-media"
+        ></iframe>
+      </div>
     </section>
 
     <section id="about">
       <h3>About Me</h3>
-      <p>Raised on punchlines and poetry, I blend humor with heart. On stage or on paper, I connect us through shared experience.</p>
-    </section>
-
-    <section id="comedy">
-      <h3>Comedy</h3>
-      <p>From open mics to festivals, I've toured the circuit delivering relatable sets. Check my upcoming shows and clips below.</p>
-    </section>
-
-    <section id="writing">
-      <h3>Writing</h3>
-      <p>Articles, essays, short stories—exploring life’s absurdities one sentence at a time. Browse published works and samples.</p>
-    </section>
-
-    <section id="music">
-      <h3>Music</h3>
-      <p>Guitar in hand, I craft folk-rock tunes with wit. Listen to my tracks, watch live sessions, and grab merch.</p>
-    </section>
-
-    <section id="gallery">
-      <h3>Gallery</h3>
-      <p>Snapshots from the road: backstage moments, live shots, and studio vibes. A visual journey through my creative life.</p>
+      <p>
+        Raised on stage lights and pen ink, I blend humor with melody and
+        storytelling. Whether it's a punchline, a paragraph, or a song, I aim to
+        connect us all.
+      </p>
     </section>
 
     <section id="contact">
       <h3>Get in Touch</h3>
-      <p>For bookings, collabs, or a friendly chat, email me at <a href="mailto:mark@cantan.com">mark@cantan.com</a>.</p>
+      <p>
+        Interested in a show, a collaboration, or just a chat? Drop me a line at
+        <a href="mailto:mark@cantan.com">mark@cantan.com</a>.
+      </p>
     </section>
   </main>
 
